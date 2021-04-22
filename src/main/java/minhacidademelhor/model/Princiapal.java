@@ -33,7 +33,7 @@ public class Princiapal {
 			System.out.println("telefone:" + pessoa2.getTelefone());
 			System.out.println("Sexo:" + pessoa2.getSexo());
 			System.out.println("data de Nascimento: "+ pessoa2.getDataNascimento().toString());
-			// dasd
+			
 			
 			
 			
