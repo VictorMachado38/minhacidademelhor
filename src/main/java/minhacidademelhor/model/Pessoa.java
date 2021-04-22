@@ -1,18 +1,25 @@
 package minhacidademelhor.model;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 public class Pessoa {
 
 	private long id;
 
 	private String nome;
 
-	private String CPF;
+	private String cpf;
 
 	private String email;
 
 	private String telefone;
 
-	private Usuario usuario;
+	private Sexo sexo;
+	
+	private LocalDate  dataNascimento;
+	
+	
 
 	public long getId() {
 		return id;
@@ -30,12 +37,14 @@ public class Pessoa {
 		this.nome = nome;
 	}
 
-	public String getCPF() {
-		return CPF;
+
+
+	public String getCpf() {
+		return cpf;
 	}
 
-	public void setCPF(String cPF) {
-		CPF = cPF;
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 
 	public String getEmail() {
@@ -54,13 +63,41 @@ public class Pessoa {
 		this.telefone = telefone;
 	}
 
-	public Usuario getUsuario() {
+	public Sexo getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(Sexo sexo) {
+		this.sexo = sexo;
+	}
+
+	public LocalDate getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(LocalDate dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+
+	
+	
+	/*public Date getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(Date dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+
+	/*public Usuario getUsuario() {
 		return usuario;
 	}
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
-	}
+	}*/
+	
+	
 
 	
 }
