@@ -60,6 +60,40 @@ public class PessoaDao {
 		
 	}
 	
+	public boolean salvarPessoa(Pessoa pessoa) {
+		boolean isSalvo = false;
+		String query = "insert into pessoa (nome,cpf,email,telefone,sexo,dataNascimento)"
+				+ "values(?,?,?,?,?,?);";
+		
+		try {
+			
+			con.setAutoCommit(false);
+			preparedStatement = con.prepareStatement(query);
+			preparedStatement.setString(1, pessoa.getNome());
+			preparedStatement.setString(2, pessoa.getCpf());
+			preparedStatement.setString(3, pessoa.getEmail());
+			preparedStatement.setString(4, pessoa.getTelefone());
+			preparedStatement.setString(5, pessoa.getSexo().getDescricao());
+			preparedStatement.setDate(6 ,java.sql.Date.valueOf(pessoa.getDataNascimento()) );
+			
+			//preparedStatement.execute(query);
+			preparedStatement.execute();
+			con.commit();			
+			isSalvo = true;
+			
+		}
+		catch(Exception e){
+			
+			System.out.println("Errp ao inserrir pessoa:" + e.getMessage());
+			isSalvo = false;
+			
+			
+			
+		}
+		
+		return isSalvo;
+	}
+	
 	public LocalDate convertToLocalDateViaSqlDate(Date dateToConvert) {
 	    return new java.sql.Date(dateToConvert.getTime()).toLocalDate();
 	}

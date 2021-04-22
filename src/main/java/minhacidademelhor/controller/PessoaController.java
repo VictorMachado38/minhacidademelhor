@@ -17,5 +17,12 @@ public class PessoaController {
 		List<Pessoa> pessoas;
 		return pessoas = pessoaDao.listarPessoas();
 		}
-	// dasd
+	
+	public boolean salvarPessoa(Pessoa pessoa) {
+		pessoaDao = new PessoaDao();
+		boolean isSalvo = pessoaDao.salvarPessoa(pessoa);
+		return isSalvo;
+			
+	}
+	
 }
