@@ -25,4 +25,17 @@ public class PessoaController {
 			
 	}
 	
+	public boolean editarPessoa(Pessoa pessoa) {
+		pessoaDao = new PessoaDao();
+		boolean isSalvo = pessoaDao.editarPessoa(pessoa);
+		return isSalvo;
+			
+	}
+	public boolean deletarPessoa(long id) {
+		pessoaDao = new PessoaDao();
+		boolean isSalvo = pessoaDao.deletarPessoa(id);
+		return isSalvo;
+			
+	}
+	
 }

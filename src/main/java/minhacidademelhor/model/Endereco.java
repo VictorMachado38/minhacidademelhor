@@ -10,7 +10,15 @@ public class Endereco {
 
 	private String complemento;
 
-	private Bairro bairro;
+	private String bairro;
+	
+	private String cep;
+	
+	private String cidade;
+	
+	private String estado;
+	
+	private String tipoEndereco;
 
 	public long getId() {
 		return id;
@@ -44,13 +52,47 @@ public class Endereco {
 		this.complemento = complemento;
 	}
 
-	public Bairro getBairro() {
+	public String getBairro() {
 		return bairro;
 	}
 
-	public void setBairro(Bairro bairro) {
+	public void setBairro(String bairro) {
 		this.bairro = bairro;
 	}
+
+	public String getCep() {
+		return cep;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
+	public String getTipoEndereco() {
+		return tipoEndereco;
+	}
+
+	public void setTipoEndereco(String tipoEndereco) {
+		this.tipoEndereco = tipoEndereco;
+	}
+
+	                                                                                      
 	
 	
 }
